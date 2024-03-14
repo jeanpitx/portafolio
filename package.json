@@ -18,6 +18,7 @@
     "@types/three": "^0.162.0",
     "clsx": "^2.1.0",
     "framer-motion": "^11.0.8",
+    "gh-pages": "^6.1.1",
     "keen-slider": "^6.8.6",
     "maath": "^0.10.7",
     "react": "^18.2.0",
