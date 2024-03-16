@@ -2,6 +2,7 @@ import { Tilt } from 'react-tilt';
 import { ESPANOL } from '../assets/content';
 import { useContext } from 'react';
 import { themeContext } from '../context';
+import { calcularDiferenciaFechas } from '../utils/helpers';
 
 export const TimeLine = () => {
 
@@ -14,13 +15,19 @@ export const TimeLine = () => {
                 ESPANOL.expericia.timeLine.map((exp, i) => (
                     <div
                         key={exp.titulo + i} id={exp.titulo + i} className={`row ${(i % 2 == 0) ? "row-2" : "row-1"}`}>
-                        <section> 
+                        <section>
                             <div className={`icon fas fa-home text-textPrimary ${isDark ? "bg-gradient-to-r from-pink-500 to-violet-500" : "bg-gradient-to-r from-pink-500 to-violet-500"}`}>
                                 <div>
                                     {(i % 2 == 0) ?
-                                        <span className='bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500  font-[800]' style={{ position: "absolute", left: "-250px" }}>{exp.tiempo}</span>
+                                        <div className='flex flex-col gap-0 text-right' style={{ position: "absolute", left: "-230px" }}>
+                                            <span className='bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500 font-[800]'>{exp.tiempo}</span>
+                                            <span className='-mt-2'>{calcularDiferenciaFechas(exp.tiempo)}</span>
+                                        </div>
                                         :
-                                        <span className='bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500 font-Poppins font-[800]' style={{ position: "absolute", right: "-250px" }}>{exp.tiempo}</span>
+                                        <div className='flex flex-col gap-0 text-left' style={{ position: "absolute", right: "-230px" }}>
+                                            <span className='bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500 font-Poppins font-[800]'>{exp.tiempo}</span>
+                                            <span className='-mt-2'>{calcularDiferenciaFechas(exp.tiempo)}</span>
+                                        </div>
                                     }
                                 </div>
                             </div>

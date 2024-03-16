@@ -40,11 +40,13 @@ import cine4 from "../assets/proyects/cine4.jpg";
 import poke from "../assets/proyects/poke.jpg";
 import poke2 from "../assets/proyects/poke1.jpg";
 
+import msNotif from "../assets/proyects/ms-noti.jpg";
+
 import imgSobreMi1 from "../assets/sobremi/1.jpg";
 import imgSobreMi2 from "../assets/sobremi/2.jpg";
 import imgSobreMi3 from "../assets/sobremi/3.jpg";
 import imgSobreMi4 from "../assets/sobremi/4.jpg";
-import imgReactPhone from "../assets/iconos/react-native.png";
+import img2024 from "../assets/sobremi/2024.png";
 import imgDev from "../assets/developer.svg";
 
 
@@ -92,39 +94,49 @@ export const SLIDER_HEADER: { nombre: string, src: string }[] = [
 const EXPERIENCIA_LABORAL = [
 
     {
-        titulo: "Desarrollador React Native",
+        titulo: "Full Stack especializado en React Native y Node.js",
         empresa: "NetOne Software",
-        tiempo: "Octubre 2022 - Actualidad",
+        tiempo: "Agosto 2022 - Actualidad",
         tareas: [
-            "Diseño y desarrollo de interfaces de usuario.",
-            "Implementacion de servicios: APIs, autenticacion, notificaciones push, Google Maps, etc.",
-            "Implementacion de logica de negocio.",
-            "Desarrollo backend con Java y NodeJs.",
-            "Base de datos: MySql y Mongo DB.",
-            "Depuracion y pruebas.",
+            "Diseño y desarrollo de aplicaciones móviles para Android y iOS, con React Native.",
+            "Desarrollo de microservicios con Node.js, Express y MongoDB.",
+            "Testing de funcionalidades con Jest y Supertest.",
+            "Testing de UI con Detox.",
+            "Integración de servicios externos, como APIs, JWTs, Firebase, notificaciones push, Maps, entre otros.",
+            "Utilización de manejadores de estado como Redux, Context y Zustand.",
+            "Uso de metodología ágil Scrum como marco de trabajo para la gestión de proyectos.",
+            "Colaboración activa en equipos."
         ]
     },
     {
-        titulo: "Desarrodor Full Stack",
-        empresa: "NetOne Software",
-        tiempo: "Agosto 2022 -  Abril 2023",
+        titulo: "Web Developer",
+        empresa: "Netegia",
+        tiempo: "Marzo 2022 - Agosto 2022",
         tareas: [
-            "Tecnologias : Java , Spring , Hibernate , Servlets , Javascript , JQuery , Boostrap",
-            "Bases de datos relacionales con MySQL, No relacionales MongoDB.",
-            "Plataforma de cobro automatico de documentos con medios de pago recurrentes.",
-            "Desarrollo de soluciones ágiles para el ámbito empresarial.",
+            "Mantenimiento y desarrollo de funcionalidades para un sistema de ERP (Netegia).",
+            "Desarrollo con Java y frameworks como Spring y Hibernate.",
+            "Implementación de pasarelas de pago (Mercado pago, Decidir).",
+            "Diseño de interfaces de usuario intuitivas y atractivas mediante HTML, CSS, Bootstrap y jQuery.",
+            "Testing de funcionalidades con JUnit y Mockito.",
+            "Integración y optimización de bases de datos relacionales y no relacionales.",
+            "Desarrollo de documentación técnica y capacitación de usuarios para facilitar la adopción y el mantenimiento del sistema.",
             "Sistema de plantillas de impresion para PDF, en documentos fiscales. Comprobantes, Recibos, Notas de Debito/Credito, etc"
         ]
     },
     {
-        titulo: "Desarollador Freelance",
+        titulo: "Programador Freelance",
         empresa: "Emanuel Cisterna",
         tiempo: "Julio 2021 - Actualidad",
         tareas: [
-            "Construccion de sitios web interactivos y visualmente impactantes. Meticuloso con el código limpio y las experiencias de usuario fluidas",
-            "Desarrollo completo de sitios web dinamicos",
-            "Creacion y manteniento de base de datos",
-            "Monejo de posicionamiento SEO"
+            "Desarrollo y mantenimiento de aplicaciones web y móviles.",
+            "Desarrollo de API y servicios web.",
+            "Maquetación de wireframes y diseño de interfaces de usuario.",
+            "Creación y mantenimiento de bases de datos relacionales y no relacionales.",
+            "Implementación de estrategias de SEO.",
+            "Integración de sistemas y servicios de terceros.",
+            "Realización de test, incluyendo pruebas de unitarias y de integración.",
+            "Despliegue en servidores (Vercel, Heroku, Firebase).",
+            "Implementación de lógica de negocio para cumplir con los requisitos funcionales y no funcionales del proyecto."
         ]
     },
 ];
@@ -201,7 +213,10 @@ const PROYECTOS_LIST: ProyectoInterface[] = [
         Además, para asegurar que la información llegue a tus dispositivos de manera segura y oportuna, utilizamos Firebase Messaging,
         como mensajero confiable que se encarga de que la informacion llegue exactamente donde debe ser.`,
         enlaces: [],
-        imagenes: []
+        imagenes: [
+            { src: msNotif, portada: true },
+            { src: msNotif, portada: false }
+        ]
     },
     {
         titulo: "Sistema de gestion",
@@ -254,7 +269,10 @@ const PROYECTOS_LIST: ProyectoInterface[] = [
             { nombre: "Emanuel Cisterna", img: "https://avatars.githubusercontent.com/u/101511719?v=4" },
         ],
         stack: ["NextJs", "React", "TypeScript", "Styled-components", "Swiper.Js", "Firebase"],
-        enlaces: [],
+        enlaces: [
+            {titulo: "Visitar sitio", url: "https://amazon-clone-abbsjdho4-emadev.vercel.app/"},
+            {titulo: "Ver codigo", url: "https://github.com/EmaDev/amazon-clone"},
+        ],
         imagenes: [
             { src: cine, portada: true },
             { src: cine1, portada: false },
@@ -274,7 +292,9 @@ const PROYECTOS_LIST: ProyectoInterface[] = [
             { nombre: "Emanuel Cisterna", img: "https://avatars.githubusercontent.com/u/101511719?v=4" },
         ],
         stack: ["NextJs", "React", "TypeScript", "Styled-components", "Swiper.Js"],
-        enlaces: [],
+        enlaces: [
+            {titulo: "Ver codigo", url: "https://github.com/EmaDev/pokeAppp"}
+        ],
         imagenes: [
             { src: poke, portada: true },
             { src: poke, portada: false },
@@ -370,18 +390,24 @@ export const SOBRE_MI = [
         ),
     },
     {
-        titulo: "Proyeccion a futuro",
-        descripcion: `
+        titulo: "Espectativas 2024",
+        /*descripcion: `
         Mirando hacia el futuro, mi aspiración es dedicarme plenamente al desarrollo en React, explorando sus infinitas posibilidades tanto en el ámbito web como 
         móvil. Sueño con perfeccionar mis habilidades en la creación de interfaces interactivas y experiencias de usuario excepcionales. Además, deseo seguir 
         profundizando en el desarrollo backend, específicamente con Node.js y Express, consolidando mi expertise en la construcción de sistemas robustos y eficientes. 
         Mi meta es fusionar estas tecnologías para contribuir de manera significativa a proyectos innovadores y seguir evolucionando en este emocionante camino del 
         desarrollo de software.
+        `,*/
+        descripcion: `Este año, mi enfoque como programador se centrará en perfeccionar mis habilidades en Next.js, explorar los 
+        conceptos y prácticas de desarrollo con Nest.js, e integrar Prisma como el ORM principal en mis proyectos. Además, planeo aprovechar las capacidades de diseño 
+        y estilización que ofrece shadcn/ui, una biblioteca que utiliza Tailwind CSS en su núcleo. Al unificar Next.js, Nest.js, Prisma y shadcn/ui, podré construir 
+        aplicaciones web modernas con un enfoque en el rendimiento, la escalabilidad y una experiencia de usuario excepcional. Estoy emocionado por expandir mis 
+        conocimientos y llevar mis habilidades de desarrollo a un nuevo nivel este 2024.
         `,
         content: (
             <Tilt>
                 <div className="h-96 w-96 m-auto bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center rounded-full">
-                    <Image src={imgReactPhone} className="w-96" />
+                    <Image src={img2024} className="w-96" />
                 </div>
             </Tilt>
         )
@@ -393,20 +419,23 @@ const TESTIMONIOS = [
         nombre: "Hernan Marrapodi",
         posicion: "Web Developer - NetOne",
         testimonio: `Ema es excelente en React! Siempre encuentra la vuelta a los desafíos más complicados con una habilidad 
-        impresionante. Además, es súper colaborativo y comparte sus conocimientos. Un verdadero activo para cualquier equipo.`
+        impresionante. Además, es súper colaborativo y comparte sus conocimientos. Un verdadero activo para cualquier equipo.`,
+        img: "https://media.licdn.com/dms/image/D4D03AQGz73GCTQTRTA/profile-displayphoto-shrink_400_400/0/1710017620604?e=1715817600&v=beta&t=gZ7a1TytfQvPO9lU3-Xo8iGlesx9c0QV5MQBoaaXCuI"
     },
     {
         nombre: "Hernan Rinaldo",
         posicion: "PM en NetOne",
-        testimonio: "Trabajar con Emanuel ha sido una experiencia gratificante. Su código es limpio y eficiente, y siempre cumple con los plazos de entrega."
+        testimonio: "Trabajar con Emanuel ha sido una experiencia gratificante. Su código es limpio y eficiente, y siempre cumple con los plazos de entrega.",
+        img: "https://media.licdn.com/dms/image/C4E03AQFjModxY29HCw/profile-displayphoto-shrink_100_100/0/1516197657853?e=1715817600&v=beta&t=8WUE6RP-GWGPvCLPgrJZGG020wLU_LmYw3Z0yU9vjuU"
     },
     {
         nombre: "Lucia Tonietti",
-        posicion: "Developer en ",
+        posicion: "Developer en Fusap",
         testimonio: `Trabajar con Ema fue una experiencia enriquecedora. Es un gran compañero de equipo. Siempre está dispuesto a escuchar y aportar nuevas ideas, 
         creando un ambiente de trabajo
          colaborativo y positivo.
-         Su dedicación y profesionalismo son realmente inspiradores. ¡Un placer trabajar junto a él en cualquier proyecto!`
+         Su dedicación y profesionalismo son realmente inspiradores. ¡Un placer trabajar junto a él en cualquier proyecto!`,
+         img: "https://media.licdn.com/dms/image/C4D03AQGmDjJZD6s97Q/profile-displayphoto-shrink_100_100/0/1626649672259?e=1715817600&v=beta&t=9aECUM_SCijobBA4G7sfAdtWixR-Iu8Yqaacw5oqk2k"
     },
     {
         nombre: "Leandro Alfaro",
@@ -414,7 +443,7 @@ const TESTIMONIOS = [
         testimonio: `Ema es un excelente compañero, no solo ha demostrado su habilidad desde lo técnico, sino que además 
         realiza un gran aporte al equipo. Siempre se puede contar con el para resolver cualquier tipo de problemática, 
         desde algoritmos, bases de datos, front-end, procesos y muchas otras cosas. Siempre desde NetOne valoramos su opinión.`,
-        imagen: ""
+        img: "https://media.licdn.com/dms/image/D4D03AQHTa6xT1mRj9A/profile-displayphoto-shrink_400_400/0/1669904242410?e=1715817600&v=beta&t=EjwrISbjJirmFQzQga6r98BXLX8il4feogqfaDt2_d8"
     },
 
 ]

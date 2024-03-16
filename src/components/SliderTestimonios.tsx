@@ -91,7 +91,7 @@ export const SliderTestimonios = () => {
                                     <div className="text-sm text-slate-500">{item.posicion}</div>
                                 </div>
                                 <div className="overflow-hidden rounded-full bg-slate-50">
-                                    <img alt="" src={item.imagen} className="h-12 w-12 object-cover" loading="lazy" width="46" height="46" />
+                                    <img alt={item.nombre} src={item.img} className="h-12 w-12 object-cover" loading="lazy" width="46" height="46" />
                                 </div>
                             </figcaption>
                         </figure>
