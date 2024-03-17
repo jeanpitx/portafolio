@@ -390,7 +390,7 @@ export const SOBRE_MI = [
         ),
     },
     {
-        titulo: "Espectativas 2024",
+        titulo: "Expectativas 2024",
         /*descripcion: `
         Mirando hacia el futuro, mi aspiración es dedicarme plenamente al desarrollo en React, explorando sus infinitas posibilidades tanto en el ámbito web como 
         móvil. Sueño con perfeccionar mis habilidades en la creación de interfaces interactivas y experiencias de usuario excepcionales. Además, deseo seguir 
@@ -452,7 +452,7 @@ const TESTIMONIOS = [
 export const ENLACES = {
     nav: [
         { name: "Sobre mi", href: "#sobre-mi" },
-        { name: "Experincia", href: "#experiencia" },
+        { name: "Experiencia", href: "#experiencia" },
         { name: "Contacto", href: "#contacto" },
 
     ],
