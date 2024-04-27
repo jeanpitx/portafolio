@@ -92,11 +92,19 @@ export const SLIDER_HEADER: { nombre: string, src: string }[] = [
 ];
 
 const EXPERIENCIA_LABORAL = [
+    {
+        titulo: "FrontEnd Developer",
+        empresa: "Segurarse SA",
+        tiempo: "Mayo 2024 - Actualidad",
+        tareas: [
+           "Rediseño multi-cotizador web de seguros"
+        ]
+    },
 
     {
         titulo: "Full Stack especializado en React Native y Node.js",
         empresa: "NetOne Software",
-        tiempo: "Agosto 2022 - Actualidad",
+        tiempo: "Agosto 2022 - Abril 2024",
         tareas: [
             "Diseño y desarrollo de aplicaciones móviles para Android y iOS, con React Native.",
             "Desarrollo de microservicios con Node.js, Express y MongoDB.",
