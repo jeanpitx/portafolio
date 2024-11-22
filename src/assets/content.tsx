@@ -97,7 +97,9 @@ const EXPERIENCIA_LABORAL = [
         empresa: "Segurarse SA",
         tiempo: "Mayo 2024 - Actualidad",
         tareas: [
-           "Rediseño multi-cotizador web de seguros"
+           "Desarrollé un módulo en Ionic para reportar siniestros con detalles completos, mejorando la experiencia del usuario y agilizando la gestión.",
+           "Creé un multicotizador de seguros de autos con comparación de más de 15 aseguradoras, optimizando la experiencia y la conversión de clientes.",
+           "Implementé la descarga y visualización de pólizas en la app, facilitando acceso rápido a documentos importantes."
         ]
     },
 
@@ -119,7 +121,7 @@ const EXPERIENCIA_LABORAL = [
     {
         titulo: "Web Developer",
         empresa: "Netegia",
-        tiempo: "Marzo 2022 - Agosto 2022",
+        tiempo: "Julio 2021 - Agosto 2022",
         tareas: [
             "Mantenimiento y desarrollo de funcionalidades para un sistema de ERP (Netegia).",
             "Desarrollo con Java y frameworks como Spring y Hibernate.",
@@ -428,13 +430,13 @@ const TESTIMONIOS = [
         posicion: "Web Developer - NetOne",
         testimonio: `Ema es excelente en React! Siempre encuentra la vuelta a los desafíos más complicados con una habilidad 
         impresionante. Además, es súper colaborativo y comparte sus conocimientos. Un verdadero activo para cualquier equipo.`,
-        img: "https://media.licdn.com/dms/image/D4D03AQGz73GCTQTRTA/profile-displayphoto-shrink_400_400/0/1710017620604?e=1715817600&v=beta&t=gZ7a1TytfQvPO9lU3-Xo8iGlesx9c0QV5MQBoaaXCuI"
+        img: "https://media.licdn.com/dms/image/v2/D4D03AQGz73GCTQTRTA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1710017620604?e=2147483647&v=beta&t=8CpQ0a9pG6SQdnAQI-AYFxW5dd3hLJMrX3cvWmyQMkE"
     },
     {
         nombre: "Hernan Rinaldo",
         posicion: "PM en NetOne",
         testimonio: "Trabajar con Emanuel ha sido una experiencia gratificante. Su código es limpio y eficiente, y siempre cumple con los plazos de entrega.",
-        img: "https://media.licdn.com/dms/image/C4E03AQFjModxY29HCw/profile-displayphoto-shrink_100_100/0/1516197657853?e=1715817600&v=beta&t=8WUE6RP-GWGPvCLPgrJZGG020wLU_LmYw3Z0yU9vjuU"
+        img: "https://media.licdn.com/dms/image/v2/C4E03AQFjModxY29HCw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1516197657825?e=2147483647&v=beta&t=Rff4QYurDmDtDRH0lovv-Yxq0DuN07ZxMwE8_rHozZg"
     },
     {
         nombre: "Lucia Tonietti",
@@ -443,7 +445,7 @@ const TESTIMONIOS = [
         creando un ambiente de trabajo
          colaborativo y positivo.
          Su dedicación y profesionalismo son realmente inspiradores. ¡Un placer trabajar junto a él en cualquier proyecto!`,
-         img: "https://media.licdn.com/dms/image/C4D03AQGmDjJZD6s97Q/profile-displayphoto-shrink_100_100/0/1626649672259?e=1715817600&v=beta&t=9aECUM_SCijobBA4G7sfAdtWixR-Iu8Yqaacw5oqk2k"
+         img: "https://media.licdn.com/dms/image/v2/C4D03AQGmDjJZD6s97Q/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1626649672259?e=2147483647&v=beta&t=IZL9MVIzDovoW9V9NjpntFz41dtNSIf_CMAHhR8l54k"
     },
     {
         nombre: "Leandro Alfaro",
@@ -451,7 +453,7 @@ const TESTIMONIOS = [
         testimonio: `Ema es un excelente compañero, no solo ha demostrado su habilidad desde lo técnico, sino que además 
         realiza un gran aporte al equipo. Siempre se puede contar con el para resolver cualquier tipo de problemática, 
         desde algoritmos, bases de datos, front-end, procesos y muchas otras cosas. Siempre desde NetOne valoramos su opinión.`,
-        img: "https://media.licdn.com/dms/image/D4D03AQHTa6xT1mRj9A/profile-displayphoto-shrink_400_400/0/1669904242410?e=1715817600&v=beta&t=EjwrISbjJirmFQzQga6r98BXLX8il4feogqfaDt2_d8"
+        img: "https://media.licdn.com/dms/image/v2/D4D03AQHTa6xT1mRj9A/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1669904242410?e=2147483647&v=beta&t=j4KtxtawDuja8SVAaSd2Eh33OctqRsnTgH1sXlKO048"
     },
 
 ]
@@ -477,7 +479,7 @@ export const ESPANOL = {
     },
     proyectos: {
         titulo: "Proyectos.",
-        descripcion: "Mira mis mejores proyectos, son la fusión de creatividad y código, brindando experiencias de usuario atractivas como nunca antes.",
+        descripcion: "Algunos de los proyectos que he desarrollado.",
         proyectos: PROYECTOS_LIST
     },
     expericia: {
