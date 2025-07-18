@@ -44,8 +44,8 @@ export const Contacto = () => {
         }
         const resp = await emailjs.send("service_1sz7mit", "template_xmndj6k",
             {
-                to_name: "Emanuel Cisterna",
-                to_email: "emanuel00developer@gmail.com",
+                to_name: "Jean Meza",
+                to_email: "jeanpitx@gmail.com",
                 from_name: name,
                 from_mail: email,
                 from_phone: phone,
@@ -89,12 +89,12 @@ export const Contacto = () => {
                 </div>
                 <div className="mb-4 flex flex-col gap-2">
                     <label htmlFor="email">Email</label>
-                    <Input id="email" placeholder="emanuel@ejemplo.com" type="email" className='bg-primary'
+                    <Input id="email" placeholder="jean@ejemplo.com" type="email" className='bg-primary'
                         name="email" onChange={(e) => { onInputStateChange(e) }} />
                 </div>
                 <div className="mb-4 flex flex-col gap-2">
                     <label htmlFor="phone">{"Telefono (*opcional)"}</label>
-                    <Input id="phone" placeholder="+54" type="number" className='bg-primary'
+                    <Input id="phone" placeholder="+593" type="number" className='bg-primary'
                         name='phone' onChange={(e) => { onInputStateChange(e) }} />
                 </div>
                 <div className="mb-4 flex flex-col gap-2">
@@ -125,7 +125,7 @@ export const Contacto = () => {
                     <Link href={ENLACES.linkedin} className='text-textPrimary text-2xl md:text-3xl'>
                         {<FaLinkedin />}
                     </Link>
-                    <Snippet hideSymbol color='warning' tooltipProps={{ content: "Copiar al portapapeles", }} className='text-xs md:text-sm'>emanuelcisterna@outlook.com</Snippet>
+                    <Snippet hideSymbol color='warning' tooltipProps={{ content: "Copiar al portapapeles", }} className='text-xs md:text-sm'>yojean02@hotmail.com</Snippet>
                 </div>
             </form>
 

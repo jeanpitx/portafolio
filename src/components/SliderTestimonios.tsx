@@ -101,9 +101,11 @@ export const SliderTestimonios = () => {
             {loaded && instanceRef.current &&
                 (<div className="w-3/4 m-auto flex items-center justify-center gap-2 my-4">
                     {
-                        [...Array(instanceRef.current?.track.details.slides.length)].map((dot, i) => (
-                            <span key={dot +  "-" +i}
-                                className={`h-3 w-3 rounded-full ${i == currentSlide ? "bg-[#fff] h-4 w-4" : "bg-[rgba(255,255,255,0.4)]"}`}>
+                        [...Array(instanceRef.current?.track.details.slides.length)].map((_, i) => (
+                            <span
+                                key={`dot-${i}`}
+                                onClick={() => instanceRef.current?.moveToIdx(i)} // Agregar evento onClick
+                                className={`h-3 w-3 rounded-full cursor-pointer ${i === currentSlide ? "bg-[#fff] h-4 w-4" : "bg-[rgba(255,255,255,0.4)]"}`}>
                             </span>
                         ))
                     }

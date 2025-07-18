@@ -27,15 +27,15 @@ export const Footer = () => {
                         <p className="text-base font-bold tracking-wide">Contacto</p>
                         <div className="flex">
                             <p className="mr-1 text-textSecondary">Telefono:</p>
-                            <a href="tel:850-123-5021" aria-label="Our phone" title="Our phone" className="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800">+54 11-6434-0772</a>
+                            <a href="tel:850-123-5021" aria-label="Our phone" title="Our phone" className="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800">+593 960-445-403</a>
                         </div>
                         <div className="flex">
                             <p className="mr-1 text-textSecondary">Email:</p>
-                            <a href="mailto:info@lorem.mail" aria-label="Our email" title="Our email" className="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800">emanuelcisterna@outlook.com</a>
+                            <a href="mailto:info@lorem.mail" aria-label="Our email" title="Our email" className="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800">yojean02@hotmail.com</a>
                         </div>
                         <div className="flex">
                             <a href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer" aria-label="Our address" title="Our address" className="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800">
-                                San justo, Buenos Aires
+                                Manabí, Ecuador
                             </a>
                         </div>
                     </div>
