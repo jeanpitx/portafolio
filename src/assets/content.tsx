@@ -43,7 +43,6 @@ import poke2 from "../assets/proyects/poke1.jpg";
 import msNotif from "../assets/proyects/ms-noti.jpg";
 
 import imgSobreMi1 from "../assets/sobremi/1.jpg";
-import imgSobreMi2 from "../assets/sobremi/2.jpg";
 import imgViejito from "../assets/sobremi/viejito.jpg";
 import imgSobreMi3 from "../assets/sobremi/3.jpg";
 import imgSobreMi4 from "../assets/sobremi/4.jpg";
