@@ -42,16 +42,16 @@ export const Contacto = () => {
                 icon: "warning"
             })
         }
-        const resp = await emailjs.send("service_1sz7mit", "template_xmndj6k",
+        const resp = await emailjs.send("service_fwfb1kp", "template_zgkonj4",
             {
                 to_name: "Jean Meza",
-                to_email: "jeanpitx@gmail.com",
+                to_email: "yojean02@hotmail.com",
                 from_name: name,
                 from_mail: email,
                 from_phone: phone,
                 message: message,
             },
-            "IRpKX0tzEcKYY7rM0"
+            "118a8IyEOUE4V8f6J"
         )
         setIsLoading(false);
         if (resp.status == 200) {
