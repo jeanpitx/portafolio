@@ -63,10 +63,10 @@ export const Proyectos = () => {
               </div>
 
               <div className="mt-4 h-12 flex">
-                <AvatarGroup isBordered>
+                <AvatarGroup isBordered className="ml-3">
                   {item.colaboradores.map(colab => (
                     <Tooltip key={colab.nombre} color="secondary" content={colab.nombre} className="capitalize">
-                      <Avatar src={colab.img} />
+                      <Avatar src={colab.img} classNames={{ base: "data-[hover=true]:scale-110 data-[hover=true]:translate-x-0" }} />
                     </Tooltip>
                   ))}
                 </AvatarGroup>
