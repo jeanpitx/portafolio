@@ -1,0 +1,161 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   style="stop-color:#0f0c29"/>
+      <stop offset="45%"  style="stop-color:#1e1b4b"/>
+      <stop offset="100%" style="stop-color:#312e81"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   style="stop-color:#a855f7"/>
+      <stop offset="100%" style="stop-color:#ec4899"/>
+    </linearGradient>
+    <linearGradient id="accentBlue" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   style="stop-color:#6366f1"/>
+      <stop offset="100%" style="stop-color:#a855f7"/>
+    </linearGradient>
+    <linearGradient id="avatarBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   style="stop-color:#a855f7"/>
+      <stop offset="100%" style="stop-color:#ec4899"/>
+    </linearGradient>
+    <clipPath id="avatarClip">
+      <circle cx="168" cy="252" r="108"/>
+    </clipPath>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="18" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGrad)"/>
+
+  <!-- Decorative blobs -->
+  <circle cx="980" cy="80"  r="220" fill="#4c1d95" opacity="0.25"/>
+  <circle cx="1100" cy="500" r="180" fill="#6d28d9" opacity="0.18"/>
+  <circle cx="60"  cy="560" r="160" fill="#312e81" opacity="0.3"/>
+
+  <!-- Grid dots pattern (subtle) -->
+  <pattern id="dots" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+    <circle cx="2" cy="2" r="1.2" fill="rgba(255,255,255,0.07)"/>
+  </pattern>
+  <rect width="1200" height="630" fill="url(#dots)"/>
+
+  <!-- Left accent bar -->
+  <rect x="60" y="80" width="6" height="470" rx="3" fill="url(#accent)"/>
+
+  <!-- Avatar circle border (gradient ring) -->
+  <circle cx="168" cy="252" r="114" fill="url(#avatarBorder)" opacity="0.9"/>
+  <circle cx="168" cy="252" r="108" fill="#1e1b4b"/>
+  <!-- Avatar initials fallback -->
+  <circle cx="168" cy="252" r="108" fill="#2d2b6b" clip-path="url(#avatarClip)"/>
+  <text x="168" y="272" font-family="'Segoe UI',Arial,sans-serif" font-size="64" font-weight="800"
+        text-anchor="middle" fill="white" opacity="0.9">JM</text>
+
+  <!-- Available badge -->
+  <rect x="104" y="374" width="130" height="28" rx="14" fill="#16a34a" opacity="0.9"/>
+  <circle cx="120" cy="388" r="5" fill="#86efac"/>
+  <text x="168" y="393" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="600"
+        text-anchor="middle" fill="white">Disponible</text>
+
+  <!-- NAME -->
+  <text x="330" y="185"
+        font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif"
+        font-size="82" font-weight="800" letter-spacing="-2"
+        fill="white">Jean Meza</text>
+
+  <!-- Gradient underline under name -->
+  <rect x="330" y="196" width="480" height="5" rx="3" fill="url(#accent)"/>
+
+  <!-- Title -->
+  <text x="330" y="248"
+        font-family="'Segoe UI',Arial,sans-serif"
+        font-size="30" font-weight="300" letter-spacing="0.5"
+        fill="#c4b5fd">Full Stack Developer &amp; Web Designer</text>
+
+  <!-- Years badge -->
+  <rect x="330" y="270" width="175" height="32" rx="16" fill="url(#accentBlue)" opacity="0.85"/>
+  <text x="417" y="291" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700"
+        text-anchor="middle" fill="white">+8 años de experiencia</text>
+
+  <!-- Location -->
+  <text x="525" y="291" font-family="'Segoe UI',Arial,sans-serif" font-size="14"
+        fill="#a5b4fc">📍 Manabí, Ecuador</text>
+
+  <!-- Divider -->
+  <rect x="330" y="322" width="820" height="1" fill="rgba(255,255,255,0.12)"/>
+
+  <!-- Tech stack tags -->
+  <!-- Row 1 -->
+  <g font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="600">
+    <!-- tag helper: rect + text -->
+    <!-- Laravel -->
+    <rect x="330" y="338" width="90"  height="28" rx="14" fill="rgba(168,85,247,0.2)" stroke="#a855f7" stroke-width="1"/>
+    <text x="375"  y="357" text-anchor="middle" fill="#e9d5ff">Laravel</text>
+
+    <rect x="430" y="338" width="78"  height="28" rx="14" fill="rgba(168,85,247,0.2)" stroke="#a855f7" stroke-width="1"/>
+    <text x="469"  y="357" text-anchor="middle" fill="#e9d5ff">React</text>
+
+    <rect x="518" y="338" width="78"  height="28" rx="14" fill="rgba(168,85,247,0.2)" stroke="#a855f7" stroke-width="1"/>
+    <text x="557"  y="357" text-anchor="middle" fill="#e9d5ff">Next.js</text>
+
+    <rect x="606" y="338" width="62"  height="28" rx="14" fill="rgba(168,85,247,0.2)" stroke="#a855f7" stroke-width="1"/>
+    <text x="637"  y="357" text-anchor="middle" fill="#e9d5ff">Java</text>
+
+    <rect x="678" y="338" width="110" height="28" rx="14" fill="rgba(168,85,247,0.2)" stroke="#a855f7" stroke-width="1"/>
+    <text x="733"  y="357" text-anchor="middle" fill="#e9d5ff">Spring Boot</text>
+
+    <rect x="798" y="338" width="78"  height="28" rx="14" fill="rgba(168,85,247,0.2)" stroke="#a855f7" stroke-width="1"/>
+    <text x="837"  y="357" text-anchor="middle" fill="#e9d5ff">Quarkus</text>
+
+    <rect x="886" y="338" width="52"  height="28" rx="14" fill="rgba(168,85,247,0.2)" stroke="#a855f7" stroke-width="1"/>
+    <text x="912"  y="357" text-anchor="middle" fill="#e9d5ff">Go</text>
+
+    <rect x="948" y="338" width="88"  height="28" rx="14" fill="rgba(168,85,247,0.2)" stroke="#a855f7" stroke-width="1"/>
+    <text x="992"  y="357" text-anchor="middle" fill="#e9d5ff">.NET / C#</text>
+
+    <!-- Row 2 -->
+    <rect x="330" y="376" width="80"  height="28" rx="14" fill="rgba(99,102,241,0.2)" stroke="#6366f1" stroke-width="1"/>
+    <text x="370"  y="395" text-anchor="middle" fill="#c7d2fe">Docker</text>
+
+    <rect x="420" y="376" width="72"  height="28" rx="14" fill="rgba(99,102,241,0.2)" stroke="#6366f1" stroke-width="1"/>
+    <text x="456"  y="395" text-anchor="middle" fill="#c7d2fe">Azure</text>
+
+    <rect x="502" y="376" width="60"  height="28" rx="14" fill="rgba(99,102,241,0.2)" stroke="#6366f1" stroke-width="1"/>
+    <text x="532"  y="395" text-anchor="middle" fill="#c7d2fe">AWS</text>
+
+    <rect x="572" y="376" width="100" height="28" rx="14" fill="rgba(99,102,241,0.2)" stroke="#6366f1" stroke-width="1"/>
+    <text x="622"  y="395" text-anchor="middle" fill="#c7d2fe">TypeScript</text>
+
+    <rect x="682" y="376" width="78"  height="28" rx="14" fill="rgba(99,102,241,0.2)" stroke="#6366f1" stroke-width="1"/>
+    <text x="721"  y="395" text-anchor="middle" fill="#c7d2fe">Node.js</text>
+
+    <rect x="770" y="376" width="80"  height="28" rx="14" fill="rgba(99,102,241,0.2)" stroke="#6366f1" stroke-width="1"/>
+    <text x="810"  y="395" text-anchor="middle" fill="#c7d2fe">MySQL</text>
+
+    <rect x="860" y="376" width="94"  height="28" rx="14" fill="rgba(99,102,241,0.2)" stroke="#6366f1" stroke-width="1"/>
+    <text x="907"  y="395" text-anchor="middle" fill="#c7d2fe">Oracle DB</text>
+
+    <rect x="964" y="376" width="82"  height="28" rx="14" fill="rgba(99,102,241,0.2)" stroke="#6366f1" stroke-width="1"/>
+    <text x="1005" y="395" text-anchor="middle" fill="#c7d2fe">MongoDB</text>
+  </g>
+
+  <!-- Bottom divider -->
+  <rect x="0" y="490" width="1200" height="1" fill="rgba(255,255,255,0.08)"/>
+
+  <!-- Bottom bar -->
+  <rect x="0" y="491" width="1200" height="139" fill="rgba(0,0,0,0.25)"/>
+
+  <!-- Contact info row -->
+  <g font-family="'Segoe UI',Arial,sans-serif" font-size="18" fill="#a5b4fc">
+    <text x="90"  y="548">✉  yojean02@hotmail.com</text>
+    <text x="420" y="548">📞  +593 960-445-403</text>
+    <text x="700" y="548">🔗  linkedin.com/in/jeanpitx</text>
+    <text x="990" y="548">🐙  github.com/jeanpitx</text>
+  </g>
+
+  <!-- Portfolio URL -->
+  <text x="600" y="601"
+        font-family="'Segoe UI',Arial,sans-serif"
+        font-size="20" font-weight="600" text-anchor="middle"
+        fill="rgba(255,255,255,0.4)">jeanpitx.github.io/portafolio</text>
+</svg>
