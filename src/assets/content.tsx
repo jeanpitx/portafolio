@@ -86,14 +86,27 @@ export const SLIDER_HEADER: { nombre: string, src: string }[] = [
     { nombre: "AWS", src: imgAws }
 ];
 
-const EXPERIENCIA_LABORAL = [
+export const EXPERIENCIA_LABORAL = [
     {
         titulo: "Programador Semi Senior",
-        empresa: "Sipecom SA",
-        tiempo: "Noviembre 2021 - Actualidad",
+        empresa: "Sipecom SA — Eclipsoft",
+        tiempo: "Abril 2026 - Actualidad",
         tareas: [
-            "Desarrollo de sistemas y aplicativos para empresas outsourcing con PHP avanzado y SQL Server.",
+            "Desarrollo de sistemas empresariales en modalidad outsourcing para Eclipsoft dentro de Sipecom SA.",
+            "Programación con Java y Spring Boot para backend de aplicaciones de negocio.",
+            "Uso de JHipster como generador de proyectos full stack con arquitectura limpia.",
+            "Despliegue y gestión de entornos con Docker y contenedores.",
+        ]
+    },
+    {
+        titulo: "Programador Semi Senior",
+        empresa: "Sipecom SA — Kentucky Fried Chicken",
+        tiempo: "Noviembre 2021 - Marzo 2026",
+        tareas: [
+            "Desarrollo de sistemas y aplicativos para KFC en modalidad outsourcing con PHP avanzado y SQL Server.",
             "Programación de scripts y desarrollo de frontend y backend para restaurantes y APIs del grupo KFC.",
+            "Desarrollo de microservicios y APIs con Java (Quarkus y Spring) y Go para aplicativos de alto rendimiento.",
+            "Despliegue y gestión de servicios con Docker y contenedores en entornos de producción.",
             "Gestión de pases a producción, revisión de cambios y reuniones diarias con el equipo de trabajo.",
             "Monitoreo de pases y pruebas, manejo de SQL Compare, Git y Azure.",
         ]
@@ -128,11 +141,11 @@ const EXPERIENCIA_LABORAL = [
         tiempo: "Enero 2017 - Actualidad",
         tareas: [
             "Desarrollo y mantenimiento de aplicaciones web y móviles.",
-            "Desarrollo de APIs y servicios web.",
+            "Desarrollo de APIs y servicios web con Laravel, .NET Web 6, Inertia.js y MVC Razor con Oracle.",
             "Maquetación de wireframes y diseño de interfaces de usuario.",
             "Creación y mantenimiento de bases de datos relacionales y no relacionales.",
             "Integración de sistemas y servicios de terceros.",
-            "Despliegue en servidores (Vercel, Firebase, VPS).",
+            "Despliegue en servidores: Vercel, Firebase, VPS, Vapor (Laravel) y Render.",
             "Implementación de lógica de negocio para cumplir con requisitos funcionales y no funcionales.",
             "Desarrollo de sistemas para Habitantos (Evaluar.com): plataforma inmobiliaria con Laravel y Vue.",
             "Desarrollo de módulos adicionales para el Banco Comercial de Manabí: integraciones y mejoras sobre sistemas existentes.",
@@ -141,7 +154,7 @@ const EXPERIENCIA_LABORAL = [
     },
 ];
 
-const PROYECTOS_LIST: ProyectoInterface[] = [
+export const PROYECTOS_LIST: ProyectoInterface[] = [
     
     {
         titulo: "E-commerce",
@@ -311,9 +324,9 @@ const PROYECTOS_LIST: ProyectoInterface[] = [
 const cards = [
     {
         id: 1,
-        content: "",
+        content: "Jean Meza — Full Stack Developer",
         className: "md:col-span-1",
-        thumbnail: null
+        thumbnail: "https://avatars.githubusercontent.com/u/13682353?v=4"
     },
     {
         id: 2,
@@ -409,7 +422,7 @@ export const SOBRE_MI = [
     }
 ];
 
-const TESTIMONIOS = [
+export const TESTIMONIOS = [
     {
         nombre: "Mychael Castro",
         posicion: "Product Owner - Kentucky Fried Chicken (KFC)",
@@ -466,7 +479,8 @@ export const ENLACES = {
     ],
     linkedin: "https://www.linkedin.com/in/jeanpitx",
     github: "https://github.com/jeanpitx",
-    instagram: "https://www.instagram.com/jeanpitx/"
+    instagram: "https://www.instagram.com/jeanpitx/",
+    whatsapp: "https://wa.me/593960445403"
 
 }
 
@@ -486,7 +500,7 @@ export const ESPANOL = {
         timeLine: EXPERIENCIA_LABORAL
     },
     sobreMi: SOBRE_MI,
-    testimonios: TESTIMONIOS
+    testimonios: TESTIMONIOS,
 }
 
 

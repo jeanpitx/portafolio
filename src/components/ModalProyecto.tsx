@@ -1,6 +1,7 @@
 import { Avatar, AvatarGroup, Button, Chip, Divider, Link, Modal, ModalBody, ModalContent, ModalFooter, Tooltip } from '@nextui-org/react'
 import { ProyectoInterface } from '../assets/content';
 import { ImageSlider } from './ImageSlider';
+import { useLang } from '../context';
 
 
 interface Props {
@@ -11,6 +12,8 @@ interface Props {
 
 
 export const ModalProyecto = ({ isOpen = false, onOpenChange, data }: Props) => {
+    const { content } = useLang();
+
     return (
         <Modal
             isOpen={isOpen}
@@ -33,7 +36,7 @@ export const ModalProyecto = ({ isOpen = false, onOpenChange, data }: Props) => 
                                         key={t}
                                         variant="shadow"
                                         classNames={{
-                                            base: `bg-gradient-to-br from-indigo-500 to-pink-500 border-small 
+                                            base: `bg-gradient-to-br from-indigo-500 to-pink-500 border-small
                                             border-white/50 shadow-pink-500/30 m-1 cursor-pointer hover:skew-y-3`,
                                             content: "drop-shadow shadow-black text-white text-xs italic",
                                         }}
@@ -59,7 +62,7 @@ export const ModalProyecto = ({ isOpen = false, onOpenChange, data }: Props) => 
                                 {
                                     data?.enlaces.map(enlace => (
                                         <Button key={enlace.titulo}
-                                            href="https://github.com/nextui-org/nextui"
+                                            href={enlace.url}
                                             as={Link}
                                             showAnchorIcon
                                             variant="solid"
@@ -69,7 +72,7 @@ export const ModalProyecto = ({ isOpen = false, onOpenChange, data }: Props) => 
                                     ))
                                 }
                                 <Button color="danger" variant="flat" className='font-medium' onPress={onClose}>
-                                    Cerrar
+                                    {content.ui.modal.close}
                                 </Button>
                             </div>
 

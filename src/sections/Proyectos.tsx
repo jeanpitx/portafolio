@@ -1,13 +1,14 @@
 import { Avatar, AvatarGroup, Card, CardBody, CardFooter, Divider, Image, Link, Tooltip, useDisclosure } from "@nextui-org/react"
-import { ESPANOL, ProyectoInterface } from "../assets/content"
+import { ProyectoInterface } from "../assets/content"
 import { Titulo } from "../components/Titulo"
 import { ModalProyecto } from "../components/ModalProyecto";
 import { useState } from "react";
+import { useLang } from "../context";
 
 const colores = ["#b34c4c", "#748574", "#b99833"];
 
 export const Proyectos = () => {
-
+  const { content } = useLang();
   const { onOpenChange, isOpen } = useDisclosure();
   const [proyectoActual, setProyectoActual] = useState<ProyectoInterface>();
 
@@ -20,14 +21,14 @@ export const Proyectos = () => {
 
   return (
     <div id="proyectos" className="w-full min-h-[100vh] bg-secondary p-4 md:p-12">
-      <Titulo>{ESPANOL.proyectos.titulo}</Titulo>
+      <Titulo>{content.proyectos.titulo}</Titulo>
       <div className="lg:w-[50%] m-auto">
-        <p className="text-center text-textSecondary font-Poppins font-[600]  md:text-xl">
-          {ESPANOL.proyectos.descripcion}</p>
+        <p className="text-center text-textSecondary font-Poppins font-[600] md:text-xl">
+          {content.proyectos.descripcion}</p>
       </div>
 
       <div className="m-auto mt-12 w-full xl:w-4/5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 3xl:grid-cols-4 gap-6">
-        {ESPANOL.proyectos.proyectos.map((item, i) => (
+        {content.proyectos.proyectos.map((item, i) => (
           <Card shadow="sm" key={i}
             className="hover:scale-105 text-textPrimary bg-primary font-Poppins"
             isPressable
@@ -38,7 +39,7 @@ export const Proyectos = () => {
                     shadow="sm"
                     width="100%"
                     radius="sm"
-                    alt={item.titulo}
+                    alt={typeof item.titulo === 'string' ? item.titulo : ''}
                     className="w-full object-cover h-[220px]"
                     src={item.imagenes.find(i => i.portada == true)?.src}
                   />
@@ -46,7 +47,7 @@ export const Proyectos = () => {
                     <svg xmlns="http://www.w3.org/2000/svg" className="w-14 h-14" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
                     </svg>
-                    <span className="text-sm font-Poppins">Sin imagen</span>
+                    <span className="text-sm font-Poppins">{content.ui.projects.noImage}</span>
                   </div>
               }
               <div>
@@ -71,7 +72,6 @@ export const Proyectos = () => {
                 </AvatarGroup>
               </div>
 
-
             </CardBody>
             <Divider />
             <CardFooter>
@@ -81,7 +81,7 @@ export const Proyectos = () => {
                   isExternal
                   showAnchorIcon
                   href={item.enlaces[0].url}
-                  className="text-textSecondary italic"  
+                  className="text-textSecondary italic"
                 >
                   {item.enlaces[0].titulo}.
                 </Link>

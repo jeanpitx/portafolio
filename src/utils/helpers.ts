@@ -15,10 +15,12 @@ export function calcularDiferenciaFechas(rango: string): string {
     const diferenciaMeses = (finMesIndex - inicioMesIndex + 1) + (diferenciaAnios * 12);
 
     if (diferenciaMeses < 12) {
-        return `${diferenciaMeses} meses`;
+        return `${diferenciaMeses} ${diferenciaMeses === 1 ? "mes" : "meses"}`;
     } else {
         const anios = Math.floor(diferenciaMeses / 12);
         const mesesRestantes = diferenciaMeses % 12;
-        return `${anios} años ${mesesRestantes} meses`;
+        const parteAnios = `${anios} ${anios === 1 ? "año" : "años"}`;
+        const parteMeses = mesesRestantes > 0 ? ` ${mesesRestantes} ${mesesRestantes === 1 ? "mes" : "meses"}` : "";
+        return parteAnios + parteMeses;
     }
 }

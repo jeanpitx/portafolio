@@ -2,11 +2,11 @@ import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import { Button } from "@nextui-org/react";
 import { useState } from "react";
-import { ESPANOL } from "../assets/content";
+import { useLang } from "../context";
 
 
 export const SliderTestimonios = () => {
-
+    const { content } = useLang();
     const [currentSlide, setCurrentSlide] = useState(0);
     const [loaded, setLoaded] = useState(false);
 
@@ -67,11 +67,9 @@ export const SliderTestimonios = () => {
                     </svg>
                 </Button>
             </div>
-            <div>
-            </div>
             <div ref={sliderRef} className="keen-slider">
                 {
-                    ESPANOL.testimonios.map((item) => (
+                    content.testimonios.map((item) => (
                         <figure key={item.nombre} className="keen-slider__slide w-48 shrink-0 relative bg-white py-6 px-4
                         font-Poppins rounded-xl drop-shadow-md border">
                             <svg aria-hidden="true" width="105" height="78" className="absolute top-6 left-6 fill-slate-200">
@@ -109,14 +107,13 @@ export const SliderTestimonios = () => {
                         [...Array(instanceRef.current?.track.details.slides.length)].map((_, i) => (
                             <span
                                 key={`dot-${i}`}
-                                onClick={() => instanceRef.current?.moveToIdx(i)} // Agregar evento onClick
+                                onClick={() => instanceRef.current?.moveToIdx(i)}
                                 className={`h-3 w-3 rounded-full cursor-pointer ${i === currentSlide ? "bg-[#fff] h-4 w-4" : "bg-[rgba(255,255,255,0.4)]"}`}>
                             </span>
                         ))
                     }
                 </div>)
             }
-
         </div >
     )
 }

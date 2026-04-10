@@ -1,5 +1,8 @@
-import { createContext, useState } from 'react'
+import { createContext, useState, useContext } from 'react'
+import { ESPANOL } from './assets/content'
+import { INGLES, UI_ES } from './assets/content.en'
 
+// ─── Theme context ────────────────────────────────────────────────────────────
 interface ThemeContextInterface {
     isDark: boolean;
     getThemeLocalStorage: () => void;
@@ -42,3 +45,43 @@ export const ThemeContextProvider = ({ children }: any) => {
         </themeContext.Provider>
     )
 }
+
+// ─── Language context ─────────────────────────────────────────────────────────
+const CONTENT_ES = { ...ESPANOL, ui: UI_ES };
+const CONTENT_EN = { ...INGLES };
+
+type Lang = 'es' | 'en';
+type SiteContent = typeof CONTENT_EN;
+
+interface LangContextInterface {
+    lang: Lang;
+    content: SiteContent;
+    handleChangeLang: (l: Lang) => void;
+}
+
+export const langContext = createContext<LangContextInterface>({} as LangContextInterface);
+
+const detectLang = (): Lang => {
+    const saved = localStorage.getItem('lang');
+    if (saved === 'es' || saved === 'en') return saved;
+    return navigator.language.startsWith('en') ? 'en' : 'es';
+};
+
+export const LangContextProvider = ({ children }: any) => {
+    const [lang, setLang] = useState<Lang>(detectLang);
+
+    const handleChangeLang = (l: Lang) => {
+        setLang(l);
+        localStorage.setItem('lang', l);
+    };
+
+    const content: SiteContent = lang === 'en' ? CONTENT_EN : (CONTENT_ES as SiteContent);
+
+    return (
+        <langContext.Provider value={{ lang, content, handleChangeLang }}>
+            {children}
+        </langContext.Provider>
+    );
+};
+
+export const useLang = () => useContext(langContext);
